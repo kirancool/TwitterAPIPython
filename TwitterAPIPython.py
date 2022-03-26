@@ -3,10 +3,10 @@ import json
 import requests
 from requests_oauthlib import OAuth1Session
 
-oauth_user = OAuth1Session(client_key='',
-                               client_secret='',
-                               resource_owner_key='',
-                               resource_owner_secret='')
+oauth_user = OAuth1Session(client_key='t0S3HCeFVjL0kG7wsm43rzS3h',
+                               client_secret='hcxdoNZQTk5sW3dp8HQuZYrL6SFbgtlkzkcdFrBn00k2c2eA4Z',
+                               resource_owner_key='2418628328-MwtI3x7wSTKXVvc82VKr3mAouk9JO9BJ3JA35Wf',
+                               resource_owner_secret='hE8OC7cisnM54XcnrSChQeCA6DWZosP85crH8XdQ7Gju0')
 url_user = 'https://api.twitter.com/1.1/collections/entries.json?id=custom-539487832448843776'
 r = oauth_user.get(url_user)
 data=r.json()
@@ -34,10 +34,10 @@ import json
 import requests
 from requests_oauthlib import OAuth1Session
 
-oauth_user = OAuth1Session(client_key='',
-                               client_secret='',
-                               resource_owner_key='',
-                               resource_owner_secret='')
+oauth_user = OAuth1Session(client_key='t0S3HCeFVjL0kG7wsm43rzS3h',
+                               client_secret='hcxdoNZQTk5sW3dp8HQuZYrL6SFbgtlkzkcdFrBn00k2c2eA4Z',
+                               resource_owner_key='2418628328-MwtI3x7wSTKXVvc82VKr3mAouk9JO9BJ3JA35Wf',
+                               resource_owner_secret='hE8OC7cisnM54XcnrSChQeCA6DWZosP85crH8XdQ7Gju0')
 url_user = 'https://api.twitter.com/1.1/search/tweets.json?q=nasa&result_type=popular'
 r = oauth_user.get(url_user)
 data=r.json()
@@ -45,7 +45,7 @@ data=r.json()
 test=data['statuses'][0]
 dff=[]
 
-for tweet in range(100):
+for tweet in range(len(test):
     #print(tweet)
     tweet={'created_at':test['created_at'],
            'id':test['id'],
@@ -55,5 +55,7 @@ for tweet in range(100):
           'name':test['user']['name']}
     dff.append(tweet)
     #strdata=json.dumps(df)
-d=pd.DataFrame(dff)
-d
+df= pd.DataFrame(tweet)
+df
+
+************************************************************************************************************************************
